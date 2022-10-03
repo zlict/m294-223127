@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      const cars = ["Tesla", "BMW", "Königsegg", "VW"];
+      // Immutable addition of an element
+      const newCars = [...cars, "Fiat"];
+      console.log(newCars);
+      
+      // Mutable addition of an element
+      cars.push("Fiat");
+      console.log(cars);
+
+      // Immutable map to power 2 of the original number
+      const numbers = [2, 5, 10, 22, 56, 99];
+      const numbersPower2 = numbers.map((number) => Math.pow(number, 2));
+      console.log(numbersPower2);
+
+      const oddNumbers = numbers.filter((number) => number % 2 !== 0);
+      console.log(oddNumbers);
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
