@@ -12,16 +12,14 @@
       const characters = input.split("");
       const newCharacters = characters.map((character) => {
         const charCode = character.charCodeAt();
-        if(charCode <= "Z".charCodeAt()) {
-          return String.fromCharCode((charCode - "A".charCodeAt() + 13) % 26 + "A".charCodeAt());
-        } else {
-          return String.fromCharCode((charCode - "a".charCodeAt() + 13) % 26 + "a".charCodeAt());
-        }
+        const offset = charCode <= "Z".charCodeAt() ? "A".charCodeAt() : "a".charCodeAt();
+
+        return String.fromCharCode((charCode - offset + 13) % 26 + offset);
       });
       return newCharacters.join("");
     }
 
-    console.log(toCaesar(names[0]));
+    console.log(names.map(toCaesar));
   </script>
 </head>
 <body>
