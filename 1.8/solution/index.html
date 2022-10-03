@@ -11,7 +11,8 @@
 
       while (true) {
         guess = prompt("Nummer?");
-        tries++;
+        tries++; // tries = tries + 1;
+        //tries--; -> tries = tries - 1;
 
         if (guess == secret) {
           alert(`You win! It took you ${tries} tries`);
