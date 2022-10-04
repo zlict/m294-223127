@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const apples = document.querySelectorAll("#aepfel li");
+        apples.forEach((apple) => {
+          if(apple.innerText.split('e').length - 1 >= 2) {
+            apple.classList.add('vitaminE')
+          }
+        });
+      });
+      [{id: 1}, {id: 2}]
+    </script>
+  </head>
+
+  <body>
+    <h2>Apfelsorten im Hofladen</h2>
+    <ul id="aepfel">
+      <li>Boskop</li>
+      <li>Braeburn</li>
+      <li>Jonagold</li>
+      <li>Gala</li>
+      <li>Gravensteiner</li>
+      <li>Greenstar</li>
+    </ul>
+  </body>
+
+</html>
